@@ -1,0 +1,173 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.xiframework</groupId>
+	<artifactId>xicenter</artifactId>
+	<version>0.1</version>
+	<packaging>pom</packaging>
+	<name>xicenter</name>
+	<description>xicenter</description>
+
+	<properties>
+		<picenter-version>0.0.1-SNAPSHOT</picenter-version>
+		<spring-version>4.3.12.RELEASE</spring-version>
+		<logback-version>1.2.3</logback-version>
+		<mysql-con-version>5.1.25</mysql-con-version>
+		<mybatis-version>3.2.8</mybatis-version>
+		<mybatis-spring.version>1.2.5</mybatis-spring.version>
+		<junit-version>4.12</junit-version>
+		<dom4j.version>1.6.1</dom4j.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<jcraft.version>0.1.54</jcraft.version>
+		<jsoup.version>1.10.3</jsoup.version>
+		<commons-dbcp.version>1.4</commons-dbcp.version>
+		<cxf.version>3.2.0</cxf.version>
+		<commons-lang.version>2.6</commons-lang.version>
+		<commons-lang3.version>3.6</commons-lang3.version>
+		<crawler4j.version>4.3</crawler4j.version>
+		<curator.version>4.0.0</curator.version>
+		<dubbo.version>2.8.4</dubbo.version>
+		<fastjson.version>1.2.39</fastjson.version>
+		<guava.version>23.0</guava.version>
+		<quartz.version>2.3.0</quartz.version>
+		<orika.version>1.5.2</orika.version>
+		<okhttp.version>2.7.5</okhttp.version>
+		<okhttp3.version>3.9.0</okhttp3.version>
+		<zkclient_101tec.version>0.10</zkclient_101tec.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>2.0.1.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- ========================= apache ========================= -->
+			<dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+				<version>${commons-dbcp.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-core</artifactId>
+				<version>${cxf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>${commons-lang.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.curator</groupId>
+				<artifactId>curator-framework</artifactId>
+				<version>${curator.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.curator</groupId>
+				<artifactId>curator-client</artifactId>
+				<version>${curator.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.curator</groupId>
+				<artifactId>curator-recipes</artifactId>
+				<version>${curator.version}</version>
+			</dependency>
+
+			<!-- ========================= google ========================= -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+
+			<!-- ========================= json ========================= -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+
+			<!-- ========================= quarz ========================= -->
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz</artifactId>
+				<version>${quartz.version}</version>
+			</dependency>
+
+			<!-- ========================= orika ========================= -->
+			<dependency>
+				<groupId>ma.glasnost.orika</groupId>
+				<artifactId>orika-core</artifactId>
+				<version>${orika.version}</version>
+			</dependency>
+
+			<!-- ========================= okhttp ========================= -->
+			<dependency>
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>${okhttp3.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.squareup.okhttp</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>${okhttp.version}</version>
+			</dependency>
+
+			<!-- ========================= crawler4j ========================= -->
+			<dependency>
+				<groupId>edu.uci.ics</groupId>
+				<artifactId>crawler4j</artifactId>
+				<version>${crawler4j.version}</version>
+			</dependency>
+
+			<!-- ========================= jsoup ========================= -->
+			<dependency>
+				<groupId>org.jsoup</groupId>
+				<artifactId>jsoup</artifactId>
+				<version>${jsoup.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.jcraft</groupId>
+				<artifactId>jsch</artifactId>
+				<version>${jcraft.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.101tec/zkclient -->
+			<dependency>
+				<groupId>com.101tec</groupId>
+				<artifactId>zkclient</artifactId>
+				<version>${zkclient_101tec.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
