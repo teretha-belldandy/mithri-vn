@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.xiframework</groupId>
+		<artifactId>xicenter</artifactId>
+		<version>0.1</version>
+	</parent>
+
+	<groupId>org.xione</groupId>
+	<artifactId>picenter</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<picenter.version>0.0.1-SNAPSHOT</picenter.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.xione</groupId>
+				<artifactId>piutil</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.xione</groupId>
+				<artifactId>piconfig</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.xione</groupId>
+				<artifactId>pidata</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.xione</groupId>
+				<artifactId>piservice</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.xione</groupId>
+				<artifactId>piweb</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+
+	</dependencies>
+
+	<modules>
+		<module>piutil</module>
+		<module>piconfig</module>
+		<module>pidata</module>
+		<module>piservice</module>
+		<module>piweb</module>
+	</modules>
+
+</project>
