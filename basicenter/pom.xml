@@ -9,7 +9,8 @@
 	<description>xicenter</description>
 
 	<properties>
-		<picenter-version>0.0.1-SNAPSHOT</picenter-version>
+		<spring-boot.version>2.0.0.RC1</spring-boot.version>
+		<spring-cloud.version>Finchley.RC1</spring-cloud.version>
 		<spring-version>4.3.12.RELEASE</spring-version>
 		<logback-version>1.2.3</logback-version>
 		<mysql-con-version>5.1.25</mysql-con-version>
@@ -42,7 +43,7 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>2.0.1.RELEASE</version>
+				<version>${spring-boot.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -170,4 +171,15 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 </project>
