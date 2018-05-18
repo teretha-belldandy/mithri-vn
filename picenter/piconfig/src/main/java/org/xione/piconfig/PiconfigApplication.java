@@ -9,4 +9,5 @@ public class PiconfigApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PiconfigApplication.class, args);
 	}
+
 }

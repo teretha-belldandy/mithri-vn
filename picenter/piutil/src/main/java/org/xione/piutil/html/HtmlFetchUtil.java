@@ -1,4 +1,4 @@
-package org.xione.piutil;
+package org.xione.piutil.html;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -14,6 +14,7 @@ public class HtmlFetchUtil {
 	private static final Logger LOG = LoggerFactory.getLogger(HtmlFetchUtil.class);
 
 	public static String fetchUrlContent(String strUrl, String strPostRequest, int maxLength) {
+		LOG.info("{}_fetchUrlContent:{}, {}, {}", HtmlFetchUtil.class, strUrl, strPostRequest, maxLength);
 		StringBuffer buffer = new StringBuffer();
 		System.setProperty("sun.net.client.defaultConnectTimeout", "5000");
 		System.setProperty("sun.net.client.defaultReadTimeout", "5000");
@@ -38,7 +39,6 @@ public class HtmlFetchUtil {
 
 			rd.close();
 			hConnect.disconnect();
-			
 		} catch (Exception e) {
 			return null; // return "错误:读取网页失败！";
 		}
