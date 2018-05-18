@@ -1,4 +1,4 @@
-package org.xione.piutil.http;
+package org.xione.piutil.http.config;
 
 public enum HttpMethod {
 

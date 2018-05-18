@@ -6,9 +6,9 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.xione.piutil.http.HttpConfig;
-import org.xione.piutil.http.HttpMethod;
 import org.xione.piutil.http.HttpResp;
+import org.xione.piutil.http.config.HttpConfig;
+import org.xione.piutil.http.config.HttpMethod;
 
 import okhttp3.FormBody;
 import okhttp3.Headers;

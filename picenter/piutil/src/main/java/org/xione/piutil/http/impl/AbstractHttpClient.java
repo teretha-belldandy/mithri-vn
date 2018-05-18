@@ -3,7 +3,7 @@ package org.xione.piutil.http.impl;
 import java.util.Map;
 
 import org.xione.piutil.http.HttpClient;
-import org.xione.piutil.http.HttpConfig;
+import org.xione.piutil.http.config.HttpConfig;
 
 public class AbstractHttpClient<T> implements HttpClient<T> {
 

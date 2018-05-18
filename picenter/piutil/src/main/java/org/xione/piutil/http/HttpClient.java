@@ -2,6 +2,8 @@ package org.xione.piutil.http;
 
 import java.util.Map;
 
+import org.xione.piutil.http.config.HttpConfig;
+
 public interface HttpClient<T> {
 
 	T processGet(String url, Map<String, String> headers, Map<String, String> params);
