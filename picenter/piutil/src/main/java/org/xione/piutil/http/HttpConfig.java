@@ -33,6 +33,14 @@ public class HttpConfig {
 		this.basePath = basePath;
 	}
 
+	public String getSubPath() {
+		return subPath;
+	}
+
+	public void setSubPath(String subPath) {
+		this.subPath = subPath;
+	}
+
 	public String getCharset() {
 		return charset;
 	}
