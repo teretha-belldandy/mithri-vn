@@ -156,6 +156,20 @@
 		</dependencies>
 	</dependencyManagement>
 
+	<!-- 设置deploy的地址 -->
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>user release resp</name>
+			<url>http://localhost:8081/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>user snapshot</name>
+			<url>http://localhost:8081/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<build>
 		<plugins>
 			<plugin>
